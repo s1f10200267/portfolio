@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+h1 {
+    display: inline-block;
+    border-bottom: dashed 2px #6594e0;
+}
+
+.thumbnail {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.thumbnail img {
+    object-fit: cover;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    height: auto;
+}
+
+.hover-mask {
+    align-items: center;
+    /* テキストの中央揃え */
+    background: rgba(0, 0, 0, .5);
+    /* マスクの色(黒の50%) */
+    bottom: 0;
+    color: #fff;
+    /* テキストの色 */
+    display: flex;
+    /* テキストの中央揃え */
+    height: auto;
+    justify-content: center;
+    /* テキストの中央揃え */
+    left: 0;
+    opacity: 0;
+    /* 最初は透明(非表示) */
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .4s ease;
+    /* ゆっくりopacityのみへ変化させる */
+    width: 100%;
+}
+
+.hover-mask:hover {
+    opacity: 1;
+    /* hoverしたら透過しない(表示させる) */
+}
+
+.modal-headline {
+    border-top: solid #1e366a 1px;/*上のボーダー*/
+    border-bottom: solid #1e366a 1px;/*下のボーダー*/
+    padding: 0.5em 0 0.5em 1.5em;
+    margin-bottom: 3em;
+    color: #1e366a;
+}
+
+.modal-body ul li {
+    line-height: 1.5;
+    padding: 0.25em 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.lang-icon {
+    height: 90px;
+    padding: 15px;
+}
