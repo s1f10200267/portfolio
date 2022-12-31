@@ -1,4 +1,9 @@
+html {
+    scroll-padding-top: 70px;
+}
+
 body {
+    padding-top: 55px;
     display: flex;
     flex-flow: column;
     min-height: 100vh;
@@ -8,9 +13,45 @@ main {
     flex: 1;
 }
 
-h1 {
-    display: inline-block;
-    border-bottom: dashed 2px #6594e0;
+.bg-img {
+    background-image: url("../image/img_mv.png");
+    background-size: cover;
+    background-position: center 20%;
+    backdrop-filter: blur(2px);
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bg-img::before {
+    content: '';
+    position: absolute;
+    /* 輪郭がぼやけてしまうのでブラー範囲を広げる */
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: inherit;
+    filter: blur(2px);
+    filter: brightness(60%);
+    z-index: -1;
+  }
+
+.bg-img h1 {
+    color: #fff;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.mv-text {
+    /*
+    background-color: #FFE05D;
+    */
+    white-space: nowrap;
+    padding: 1.5em;
 }
 
 .thumbnail {
@@ -56,12 +97,25 @@ h1 {
     /* hoverしたら透過しない(表示させる) */
 }
 
+section {
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+}
+
+section:nth-of-type(2n+1){
+	background:#eee;
+}
+
+section h1 {
+    display: inline-block;
+    border-bottom: dashed 2px #6594e0;
+}
+
 .modal-headline {
     border-top: solid #1e366a 1px;/*上のボーダー*/
     border-bottom: solid #1e366a 1px;/*下のボーダー*/
-    padding: 0.5em 0 0.5em 1.5em;
+    padding: 0.5em 0 0.5em 0.5em;
     margin-bottom: 3em;
-    color: #1e366a;
 }
 
 .modal-body ul li {
@@ -69,9 +123,57 @@ h1 {
     padding: 0.25em 0;
     margin-top: 3px;
     margin-bottom: 3px;
+    list-style: none;
+}
+
+.work-detail-main img {
+    /*
+    background-color: gray;
+    */
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.carousel-inner {
+    max-height: 350px;
+}
+
+.carousel-inner img {
+    /*
+    background-color: gray;
+    */
+    max-height: 350px;
+    object-fit: contain;
+}
+  
+.carousel-indicators img {
+    max-width: 100px;
 }
 
 .lang-icon {
     height: 90px;
+    max-width: 250px;
     padding: 15px;
+    object-fit: contain;
+}
+
+.personal-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1em;
+}
+
+.fa-angle-left, .fa-angle-right {
+    color: #6495ed;
+    font-size: 2.5em;
+}
+
+.row [class*='col-'] {
+    transition: all 0.25s ease-in-out;
+}
+
+.fadeInTrigger{
+	opacity: 0;
 }
