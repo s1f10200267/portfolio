@@ -108,7 +108,13 @@ section:nth-of-type(2n+1){
 
 section h1 {
     display: inline-block;
-    border-bottom: dashed 2px #6594e0;
+    border-bottom: solid 2px #6594e0;
+}
+
+.skill-icon {
+    height: 5.5rem;
+    max-width: 7.5rem;
+    object-fit: contain;
 }
 
 .modal-headline {
@@ -127,22 +133,18 @@ section h1 {
 }
 
 .work-detail-main img {
-    /*
-    background-color: gray;
-    */
-    max-height: 350px;
+    background-color: white;
+    height: 18.5rem;
     object-fit: contain;
 }
 
 .carousel-inner {
-    max-height: 350px;
+    height: 18.5rem;
 }
 
 .carousel-inner img {
-    /*
-    background-color: gray;
-    */
-    max-height: 350px;
+    background-color: white;
+    height: 18.5rem;
     object-fit: contain;
 }
   
