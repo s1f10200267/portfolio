@@ -12,16 +12,31 @@ $('.navbar-nav>li>a , .dropdown-menu>a').on('click', function(){
 document.addEventListener('DOMContentLoaded', function () {
     var typed = new Typed('.typed', {
       strings: [
-        "Kensuke OMORI's"
+        "Kensuke OMORI"
       ],
       typeSpeed: 80,
       backSpeed: 20,
-      startDelay: 200,
+      startDelay: 500,
+      showCursor: false,
     });
 });
 
-$('.fadeInTrigger').on('inview', function(event, isInView) {
-    if (isInView) {//表示領域に入った時
-      $(this).addClass('animate__animated animate__fadeIn');//クラス名が付与
+$('.fadeInRepeat').on('inview', function(event, isInView) {
+    if (isInView) {
+      $(this).addClass('animate__animated animate__fadeIn animate__faster');
+    } else {
+      $(this).removeClass('animate__animated animate__fadeIn animate__faster');
     }
+});
+
+$('.fadeInNoRepeat').on('inview', function(event, isInView) {
+  if (isInView) {
+    $(this).addClass('animate__animated animate__fadeIn animate__faster');
+  }
+});
+
+$('.fadeInUpTrigger').on('inview', function(event, isInView) {
+  if (isInView) {
+    $(this).addClass('animate__animated animate__fadeInUp animate__faster');
+  }
 });

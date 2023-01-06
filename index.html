@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kensuke OMORI's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -20,11 +26,11 @@
     <header>
         <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-yellow">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Kensuke OMORI</a>
+                <a class="navbar-brand" id="site-name" href="#">Kensuke OMORI</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -43,15 +49,12 @@
 
         </nav>
 
-        <div class="bg-img">
+        <div class="bg-img fadeInNoRepeat">
             <div class="container">
                 <div class="mv-text text-end">
                     <h1 class="display-4 fw-bold">Welcome to</h1>
-                    <h1 class="display-4 fw-bold"><span class="hidden">K</span><span class="typed"></span></h1>
+                    <h1 class="display-4 fw-bold"><span class="hidden">K</span><span class="typed"></span>'s</h1>
                     <h1 class="display-5 fw-bold">Portfolio</h1>
-                    <!--
-                    <a class="btn btn-outline-primary btn-lg mt-3" href="#" role="button">作品を見る</a>
-                    -->
                 </div>
             </div>
         </div>
@@ -59,14 +62,14 @@
 
     <main>
         <section>
-            <div class="container fadeInTrigger">
+            <div class="container">
                 <div class="text-center">
-                    <h1 class="px-3 mb-3" id="works">Works</h1>
-                    <div class="mb-4 text-muted">
+                    <h1 class="fw-bold px-3 mb-3 fadeInUpTrigger" id="works">Works</h1>
+                    <div class="mb-4 text-muted fadeInNoRepeat">
                         画像クリックで詳細を閲覧できます。
                     </div>
-                    <div class="row mb-4">
-                        <div class="work-wrap col-md-8 offset-md-2">
+                    <div class="row mb-4 fadeInRepeat ">
+                        <div class="work-wrap col-md-8 offset-md-2 position-relative">
                             <a class="thumbnail" data-bs-toggle="modal" data-bs-target="#smanswersModal">
                                 <img class="img-fluid" src="./image/img_sman_thumb.png" alt="">
                                 <div class="hover-mask">詳細を見る</div>
@@ -75,30 +78,13 @@
                         </div>
                     </div>
 
-                    <div class="row mb-4">
+                    <div class="row mb-4 fadeInRepeat">
                         <div class="work-wrap col-lg-4 col-md-5 offset-lg-2 offset-md-1">
                             <a class="thumbnail" data-bs-toggle="modal" data-bs-target="#tetrisModal">
                                 <img class="img-fluid" src="./image/img_tet_thumb.png" alt="">
                                 <div class="hover-mask">詳細を見る</div>
                             </a>
                             <p class="mt-2">Unityでテトリス</p>
-                        </div>
-
-                        <div class="work-wrap col-lg-4 col-md-5">
-                            <a class="thumbnail" data-bs-toggle="modal" data-bs-target="#weatherModal">
-                                <img class="img-fluid" src="./image/img_slapp_thumb.png" alt="">
-                                <div class="hover-mask">詳細を見る</div>
-                            </a>
-                            <p class="mt-2">天気予報アプリ</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="work-wrap col-lg-4 col-md-5 offset-lg-2 offset-md-1">
-                            <a class="thumbnail" data-bs-toggle="modal" data-bs-target="#matchingModal">
-                                <img class="img-fluid" src="./image/img_match_thumb.png" alt="">
-                                <div class="hover-mask">詳細を見る</div>
-                            </a>
-                            <p class="mt-2">プロフィール共有サイト</p>
                         </div>
 
                         <div class="work-wrap col-lg-4 col-md-5">
@@ -109,6 +95,24 @@
                             <p class="mt-2">ダイス振りゲーム</p>
                         </div>
                     </div>
+
+                    <div class="row fadeInRepeat">
+                        <div class="work-wrap col-lg-4 col-md-5 offset-lg-2 offset-md-1">
+                            <a class="thumbnail" data-bs-toggle="modal" data-bs-target="#weatherModal">
+                                <img class="img-fluid" src="./image/img_slapp_thumb.png" alt="">
+                                <div class="hover-mask">詳細を見る</div>
+                            </a>
+                            <p class="mt-2">天気予報アプリ</p>
+                        </div>
+
+                        <div class="work-wrap col-lg-4 col-md-5">
+                            <a class="thumbnail" data-bs-toggle="modal" data-bs-target="#matchingModal">
+                                <img class="img-fluid" src="./image/img_match_thumb.png" alt="">
+                                <div class="hover-mask">詳細を見る</div>
+                            </a>
+                            <p class="mt-2">プロフィール共有サイト</p>
+                        </div>     
+                    </div>
                 </div>
             </div>
         </section>
@@ -116,15 +120,15 @@
         <section>
             <div class="container">
                 <div class="about-wrap">
-                    <div class="about-header text-center fadeInTrigger">
-                        <h1 class="px-3 mb-4" id="about">About</h1>
+                    <div class="about-header text-center">
+                        <h1 class="fw-bold px-3 mb-4 fadeInUpTrigger" id="about">About</h1>
                     </div>
-                    <div class="about-intro fadeInTrigger">
+                    <div class="about-intro fadeInRepeat">
                         <div class="row">
                             <div class="col-sm-4 p-2 text-center">
                                 <img class="personal-icon" src="./image/img_personal.png" alt="アイコン">
                             </div>
-                            <div class="col-sm-8 p-3">
+                            <div class="col-sm-8 p-4">
                                 <div class="mb-3 fw-bold fs-5">大森 健介</div>
                                 <p>東京都出身。東洋大学 情報連携学部 3年。</p>
                                 <p>高校でUnityを通じたゲーム作りでプログラミングを体験し、大学でPython, C言語, Javaといった多数のプログラミング言語やコンピュータサイエンスを学びました。
@@ -132,14 +136,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about-skill fadeInTrigger p-5">
-                        <div class="text-center">
-                            <h2 class="mb-2">Skill</h2>
-                            <div class="mb-4 text-muted">これまでに身に着けたスキルの一覧です。</div>
+                    <div class="about-skill  p-5">
+                        <div class="text-center fadeInNoRepeat">
+                            <h2 class="fw-bold mb-2">Skill</h2>
+                            <div class="mb-4 text-muted">私がこれまでに身に着けたスキルの一覧です。</div>
                         </div>
-                        <div class="row p-2">
-                            <div class="col-sm-6 col-md-4 col-lg-3 my-2">
-                                <div class="card">
+                        <div class="row p-2 row-eq-height fadeInRepeat">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-2 d-flex align-content-stretch flex-wrap">
+                                <div class="card shadow-sm">
                                     <div class="text-center">
                                         <img src="./image/img_clang.png" class="card-img-top skill-icon mt-2" alt="...">
                                     </div>
@@ -155,8 +159,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3 my-2">
-                                <div class="card">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-2 d-flex align-content-stretch flex-wrap">
+                                <div class="card shadow-sm">
                                     <div class="text-center">
                                         <img src="./image/img_python_v_logo.png" class="card-img-top skill-icon mt-2"
                                             alt="...">
@@ -169,12 +173,12 @@
                                                 70%
                                             </div>
                                         </div>
-                                        <p class="card-text mt-2">説明文説明文説明文説明文説明文説明文説明文説明文</p>
+                                        <p class="card-text mt-2">コマンドラインからファイル操作を行うアプリ制作や基本的なデータ分析を行うプログラムを作成することができます。</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3 my-2">
-                                <div class="card">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-2 d-flex align-content-stretch flex-wrap">
+                                <div class="card shadow-sm">
                                     <div class="text-center">
                                         <img src="./image/img_java_logo.webp" class="card-img-top skill-icon mt-2"
                                             alt="...">
@@ -191,8 +195,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3 my-2">
-                                <div class="card">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-2 d-flex align-content-stretch flex-wrap">
+                                <div class="card shadow-sm">
                                     <div class="text-center">
                                         <img src="./image/img_html_css.png" class="card-img-top skill-icon mt-2"
                                             alt="...">
@@ -209,8 +213,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3 my-2">
-                                <div class="card">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-2 d-flex align-content-stretch flex-wrap">
+                                <div class="card shadow-sm">
                                     <div class="text-center">
                                         <img src="./image/img_javascript_logo.png" class="card-img-top skill-icon mt-2"
                                             alt="...">
@@ -227,8 +231,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3 my-2">
-                                <div class="card">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-2 d-flex align-content-stretch flex-wrap">
+                                <div class="card shadow-sm">
                                     <div class="text-center">
                                         <img src="./image/img_django.png" class="card-img-top skill-icon mt-2"
                                             alt="...">
@@ -245,8 +249,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3 my-2">
-                                <div class="card">
+                            <div class="col-sm-6 col-md-4 col-lg-3 my-2 d-flex align-content-stretch flex-wrap">
+                                <div class="card shadow-sm">
                                     <div class="text-center">
                                         <img src="./image/img_bootstrap_logo.svg" class="card-img-top skill-icon mt-2"
                                             alt="...">
@@ -271,23 +275,25 @@
 
 
         <section>
-            <div class="container fadeInTrigger">
+            <div class="container">
                 <div class="text-center">
-                    <h1 class="px-3 mb-4" id="contact">Contact</h1>
+                    <h1 class="fw-bold px-3 mb-4 fadeInUpTrigger" id="contact">Contact</h1>
                 </div>
-                <div class="text-center">
-                    <p>私にご興味を持っていただいた方は、以下のメールアドレスにご連絡ください。</p>
-                </div>
-                <div class="p-3">
-                    <div class="row">
-                        <div class="col-2 col-md-1 offset-md-2">
-                            <h2 class="text-end"><i class="fa-solid fa-envelope"></i></h2>
-                        </div>
-                        <div class="col-8 col-md-6 text-center">
-                            <h2 class="">s1fxxxxxxxxx@iniad.org</h2>
+                <div class="">
+                    <div class="text-center fadeInNoRepeat">
+                        <p>私にご興味を持っていただいた方は、以下のメールアドレスにご連絡ください。</p>
+                    </div>
+                    <div class="p-3">
+                        <div class="row fadeInNoRepeat">
+                            <div class="col-2 col-md-1 offset-md-2 d-none d-md-block">
+                                <h2 class="text-end"><i class="fa-solid fa-envelope"></i></h2>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <h2 class="fw-bold text-nowrap">s1f102002671<i class="fa-solid fa-at"></i>iniad.org</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div>  
             </div>
         </section>
 
@@ -346,7 +352,7 @@
                                     </div>
                                     <div class="mt-3">
                                         <ul>
-                                            <li>大学の3年次に行う情報連携実習3という講義で、
+                                            <li>大学の3年次に行う「情報連携実習3」という講義で、
                                                 得意分野の異なるメンバーと協力し合いながら進めているプロジェクトです。
                                             </li>
                                             <li>情報通信技術を扱える人とそうでない人の間に生まれる格差「デジタルデバイドの解消」をテーマに、
@@ -359,29 +365,83 @@
                                             <li>サイトの実装部分(フロントエンド・バックエンドともに)を主に担当しています。</li>
                                         </ul>
                                     </div>
+
+                                    <div class="d-lg-none">
+                                        <div class="fs-4">リンク</div>
+                                        <div class="modal-headline">
+                                            <a style="text-decoration: none;" href="https://smanswers.onrender.com/"><i
+                                                    class="fa-solid fa-link"></i> サイトへのリンク<div class="text-muted">
+                                                    （サーバーの都合上、開くまで時間が掛かります）</div></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="fs-4">開発フロー</div>
+                                    <div class="modal-headline">
+                                        <ul class="timeline">
+                                            <li class="timeline-item mb-5">
+                                            <h5 class="fw-bold">プロジェクト定義</h5>
+                                            <p class="text-muted mb-2 fw-bold">4月～6月</p>
+                                            <p class="text-muted">
+                                                「デジタルデバイド」についてのサーベイの結果を基に、プロジェクトの要件について議論を行いました。
+                                                シニアのスマホ普及率に対して、スマホの操作に不安を持つ人の割合が高いことから、
+                                                「スマホに関する疑問に特化したQ & Aサイト」を立ち上げることがデジタルデバイドの解消に繋がるという結論に至りました。
+                                            </p>
+                                            </li>
+                                            <li class="timeline-item mb-5">
+                                                <h5 class="fw-bold">機能についての議論</h5>
+                                                <p class="text-muted mb-2 fw-bold">7月～9月</p>
+                                                <p class="text-muted">
+                                                高齢者向けのWebサイトを作るにあたって、どのような機能を搭載すべきかについて議論しました。
+                                                シニア世代のLINE利用率の高さに着目し、LINEボットから簡単に質問の投稿ができる機能を考案しました。
+                                                </p>
+                                            </li>
+                                            <li class="timeline-item mb-5">
+                                                <h5 class="fw-bold">実装</h5>
+                                                <p class="text-muted mb-2 fw-bold">10月～12月</p>
+                                                <p class="text-muted">
+                                                Djangoを使用し、Webサイトの実装を行いました。LINEボットからの投稿機能や、それに伴うユーザの認証機能が実装するに当たって苦労した点です。
+                                                フロントエンドの実装は主にBootstrapを利用しました。
+                                                </p>
+                                            </li>
+                                            <li class="timeline-item mb-5">
+                                                <h5 class="fw-bold">リリース</h5>
+                                                <p class="text-muted mb-2 fw-bold">12月～</p>
+                                                <p class="text-muted">
+                                                本番環境にデプロイし、サイトをリリースしました。renderへのデプロイについての参考資料が少なく、苦労しました。
+                                                今後も利用者からのフィードバックを基に改良していく予定です。
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="fs-4">制作時期</div>
-                                    <div class="modal-headline">
-                                        <div class="fw-bold">3年次 4月～(進行中)</div>
+                                    <div>
+                                        <div class="fs-4">制作時期</div>
+                                        <div class="modal-headline">
+                                            <div class="fw-bold my-2">3年次 4月～ <span class="badge bg-primary">進行中</span></div>
+                                        </div>
                                     </div>
-                                    <div class="fs-4">リンク</div>
-                                    <div class="modal-headline">
-                                        <a style="text-decoration: none;" href="https://smanswers.onrender.com/"><i
-                                                class="fa-solid fa-link"></i> サイトへのリンク<div class="text-muted">
-                                                （サーバーの都合上、開くまで時間が掛かります）</div></a>
+                                    <div class="d-none d-lg-block">
+                                        <div class="fs-4">リンク</div>
+                                        <div class="modal-headline">
+                                            <a style="text-decoration: none;" href="https://smanswers.onrender.com/"><i
+                                                    class="fa-solid fa-link"></i> サイトへのリンク<div class="text-muted">
+                                                    （サーバーの都合上、開くまで時間が掛かります）</div></a>
+                                        </div>
                                     </div>
-                                    <div class="fs-4">使用技術</div>
-                                    <div class="modal-headline">
-                                        <img class="lang-icon" src="./image/img_django.png" alt="Django"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Django">
-                                        <img class="lang-icon" src="./image/img_heroku_logo.png" alt="Heroku"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Heroku">
-                                        <img class="lang-icon" src="./image/img_bootstrap_logo.svg" alt="Bootstrap"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Bootstrap">
-                                        <img class="lang-icon" src="./image/img_line_message.png"
-                                            alt="LINE Messaging API" data-bs-toggle="tooltip" data-bs-placement="top"
-                                            title="LINE Messaging API">
+                                    <div>
+                                        <div class="fs-4">使用技術</div>
+                                        <div class="modal-headline">
+                                            <img class="lang-icon" src="./image/img_django.png" alt="Django"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Django">
+                                            <img class="lang-icon" src="./image/img_heroku_logo.png" alt="Heroku"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Heroku">
+                                            <img class="lang-icon" src="./image/img_bootstrap_logo.svg" alt="Bootstrap"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Bootstrap">
+                                            <img class="lang-icon" src="./image/img_line_message.png"
+                                                alt="LINE Messaging API" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                title="LINE Messaging API">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +457,7 @@
 
         <div class="modal fade" id="tetrisModal" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="tetrisModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl modal-fullscreen-lg-down">
                 <div class="modal-content">
                     <div class="modal-header text-center">
                         <h5 class="modal-title w-100" id="tetrisModalLabel">テトリス for Unity</h5>
@@ -439,9 +499,9 @@
                                     </div>
                                     <div class="mt-3">
                                         <ul>
-                                            <li>大学の授業で、1人で開発を行いました。</li>
+                                            <li>大学2年次に「情報連携デザイン演習2B」という講義で、1人で開発を行いました。</li>
                                             <li>Unity上で遊ぶことができるテトリスを作成しました。
-                                                プログラム部分はネット上に公開されているC言語で書かれたプログラムを参考にしながら、Unity上で動作するように書き直すという作業を行いました。
+                                                プログラム部分は<a href="https://github.com/DQNEO/CppTetris/blob/master/tetris.cpp">ネット上に公開されている</a>C言語で書かれたプログラムを参考にしながら、Unity上で動作するようにC#で書き直すという作業を行いました。
                                             </li>
                                             <li>画像や音声といった素材以外の全てを制作しました。</li>
                                         </ul>
@@ -450,7 +510,7 @@
                                 <div class="col-md-4">
                                     <div class="fs-4">制作時期</div>
                                     <div class="modal-headline">
-                                        <p class="">2年次 12月～1月</p>
+                                        <p class="fw-bold my-2">2年次 12月～1月</p>
                                     </div>
                                     <div class="fs-4">使用技術</div>
                                     <div class="modal-headline">
@@ -473,7 +533,7 @@
 
         <div class="modal fade" id="weatherModal" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="weatherModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl modal-fullscreen-lg-down">
                 <div class="modal-content">
                     <div class="modal-header text-center">
                         <h5 class="modal-title w-100" id="weatherModalLabel">天気予報アプリ</h5>
@@ -488,7 +548,7 @@
                                     </a>
                                     <div class="mt-3">
                                         <ul>
-                                            <li>大学の授業で、5人グループで開発を行いました。</li>
+                                            <li>大学2年次に「情報連携実習2A」という講義で5人グループで開発を行いました。</li>
                                             <li>Slack上で動作する、おみくじ機能と赤羽駅周辺の天気を知ることができる機能が組み合わさったアプリを作成しました。
                                                 スラッシュコマンドを打つことで、OpenWeatherMapを用いてJSONファイルを取得し、返ってきたデータが、Slack
                                                 APIを通してメッセージとして送られてきます。</li>
@@ -496,7 +556,12 @@
                                         </ul>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
+                                    <div class="fs-4">制作時期</div>
+                                    <div class="modal-headline">
+                                        <p class="fw-bold my-2">2年次 5月～6月</p>
+                                    </div>
                                     <div class="fs-4">使用技術</div>
                                     <div class="modal-headline">
                                         <img class="lang-icon" src="./image/img_slack_api_logo.png" alt="Slack API"
@@ -523,7 +588,7 @@
 
         <div class="modal fade" id="matchingModal" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="matchingModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl modal-fullscreen-lg-down">
                 <div class="modal-content">
                     <div class="modal-header text-center">
                         <h5 class="modal-title w-100" id="matchingModalLabel">プロフィール共有サイト</h5>
@@ -570,14 +635,20 @@
                                     </div>
                                     <div class="mt-3">
                                         <ul>
-                                            <li>大学の授業で、4人グループでGitを使って協力し合いながらする開発を体験しました。</li>
-                                            <li>プロフィールを登録してそれを共有し合うことを想定したサイトです。</li>
+                                            <li>大学1年次に「情報連携基礎演習2」という講義で、4人グループでGitを使って協力し合いながらする開発を体験しました。</li>
+                                            <li>プロフィールをサイトに登録し、それを共有し合うことで友達を見つけることを想定したサイトです。</li>
+                                            <li>コロナ禍によって対面授業が受けられず、友達が作りづらい状況であったことを企画のきっかけになっています。</li>
                                             <li>主にBootstrapを使用したフロントエンド部分を担当し、フォームのバリデーション機能の実装やレスポンシブデザインへの対応を行いました。
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
+                                
                                 <div class="col-md-4">
+                                    <div class="fs-4">制作時期</div>
+                                    <div class="modal-headline">
+                                        <p class="fw-bold my-2">1年次 12月～1月</p>
+                                    </div>
                                     <div class="fs-4">使用技術</div>
                                     <div class="modal-headline">
                                         <img class="lang-icon" src="./image/img_python_logo.png" alt="Python"
@@ -638,7 +709,7 @@
                                     </div>
                                     <div class="mt-3">
                                         <ul>
-                                            <li>大学のネットワークの演習授業で、4人で開発を行いました。</li>
+                                            <li>大学2年次に、ネットワークの演習授業である「情報連携エンジニアリング演習2B」という講義で、4人で開発を行いました。</li>
                                             <li>ルームIDを入力することで2人でサイコロを振り合って戦うことができるWebアプリです。
                                                 ネットワーク経由でリアルタイムにプレイヤー同士のゲームの進行状況を同期しながらゲームが進行します。</li>
                                             <li>Bootstrapを用いたフロントエンド部分を担当しました。</li>
@@ -646,6 +717,10 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
+                                    <div class="fs-4">制作時期</div>
+                                    <div class="modal-headline">
+                                        <p class="fw-bold my-2">2年次 12月～1月</p>
+                                    </div>
                                     <div class="fs-4">使用技術</div>
                                     <div class="modal-headline">
                                         <img class="lang-icon" src="./image/img_python_logo.png" alt="Python"

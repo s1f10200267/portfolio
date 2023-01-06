@@ -9,12 +9,16 @@ body {
     min-height: 100vh;
 }
 
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
 main {
     flex: 1;
 }
 
 .bg-img {
-    background-image: url("../image/img_mv.png");
+    background-image: url("../image/img_mv.jpg");
     background-size: cover;
     background-position: center 20%;
     backdrop-filter: blur(2px);
@@ -47,11 +51,9 @@ main {
 }
 
 .mv-text {
-    /*
-    background-color: #FFE05D;
-    */
     white-space: nowrap;
     padding: 1.5em;
+    font-family: 'Inconsolata', monospace;
 }
 
 .thumbnail {
@@ -70,25 +72,19 @@ main {
 
 .hover-mask {
     align-items: center;
-    /* テキストの中央揃え */
     background: rgba(0, 0, 0, .5);
     /* マスクの色(黒の50%) */
     bottom: 0;
     color: #fff;
-    /* テキストの色 */
     display: flex;
-    /* テキストの中央揃え */
     height: auto;
     justify-content: center;
-    /* テキストの中央揃え */
     left: 0;
     opacity: 0;
-    /* 最初は透明(非表示) */
     position: absolute;
     right: 0;
     top: 0;
     transition: opacity .4s ease;
-    /* ゆっくりopacityのみへ変化させる */
     width: 100%;
 }
 
@@ -118,8 +114,8 @@ section h1 {
 }
 
 .modal-headline {
-    border-top: solid #1e366a 1px;/*上のボーダー*/
-    border-bottom: solid #1e366a 1px;/*下のボーダー*/
+    border-top: solid #1e366a 1px;
+    border-bottom: solid #1e366a 1px;
     padding: 0.5em 0 0.5em 0.5em;
     margin-bottom: 3em;
 }
@@ -167,6 +163,37 @@ section h1 {
     margin: 1em;
 }
 
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
 .fa-angle-left, .fa-angle-right {
     color: #6495ed;
     font-size: 2.5em;
@@ -176,6 +203,7 @@ section h1 {
     transition: all 0.25s ease-in-out;
 }
 
-.fadeInTrigger{
+.fadeInRepeat, .fadeInNoRepeat, .fadeInUpTrigger {
 	opacity: 0;
 }
+
